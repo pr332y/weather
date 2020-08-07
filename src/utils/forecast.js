@@ -10,7 +10,7 @@ const forecast=(latitude,longitude,callback)=>{
         }else if(body.error){
             callback('Unable to detect location',undefined);
         }else{
-            callback(undefined,`${body.current.weather_descriptions[0]}. It is currently ${body.current.temperature} degrees outside. It feels like ${body.current.feelslike} degrees.`);
+            callback(undefined,`${body.current.weather_descriptions[0]}. It is currently ${body.current.temperature} degrees outside with humidity at ${body.current.humidity}%. It feels like ${body.current.feelslike} degrees.`);
             
         }
     })
